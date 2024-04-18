@@ -16,40 +16,18 @@ struct SideMenuView: View {
     var body: some View {
         VStack {
             
-            HStack {
-                Text("Files")
-                    .font(.title2)
-                    .fontWeight(.bold)
-                    .foregroundStyle(Color.black)
-                    .kerning(1.5) //letters spacing
-                
-                Text("Go")
-                    .font(.title3)
-                    .fontWeight(.bold)
-                    .foregroundStyle(Color.white)
-                    .kerning(1.5)
-                    .padding(8)
-                    .background(Color.accentColor)
-                    .clipShape(RoundedRectangle(cornerRadius: 8))
-            }
-            .padding(10)
+            HeaderView()
+                .padding(10)
             
             Divider()
                 .background(Color.gray.opacity(0.4))
+                .padding(.bottom)
             
-            HStack(spacing: 12) {
-                
-                Image("pic")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: imageSize, height: imageSize)
-                    .clipShape(Circle())
-                
-                Text("Hi, Roy")
-                    .font(.title2)
-                    .fontWeight(.bold)
-                    .foregroundStyle(.black)
-            }
+            UserProfileView (
+                name: "John",
+                imageName: "pic",
+                imageSize: imageSize
+            )
             
             tabButtonGroup
                 .padding(.leading, 20)
@@ -114,3 +92,55 @@ struct SideMenuView: View {
         .preferredColorScheme(.light)
 }
 
+
+
+//MARK: - Header View
+
+struct HeaderView: View {
+    var text: String = "Files"
+    var buttonTitle: String = "Go"
+    
+    var body: some View {
+        HStack {
+            Text(text)
+                .font(.title2)
+                .fontWeight(.bold)
+                .foregroundStyle(Color.black)
+                .kerning(1.5) //letters spacing
+            
+            Text(buttonTitle)
+                .font(.title3)
+                .fontWeight(.bold)
+                .foregroundStyle(Color.white)
+                .kerning(1.5)
+                .padding(8)
+                .background(Color.accentColor)
+                .clipShape(RoundedRectangle(cornerRadius: 8))
+        }
+    }
+}
+
+
+//MARK: - User Profile View
+
+struct UserProfileView: View {
+    
+    var name: String = "Roy"
+    var imageName: String = "pic"
+    var imageSize: CGFloat
+    
+    var body: some View {
+        HStack(spacing: 12) {
+            Image(imageName)
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: imageSize, height: imageSize)
+                .clipShape(Circle())
+            
+            Text("Hi, " + name)
+                .font(.title2)
+                .fontWeight(.bold)
+                .foregroundColor(.black)
+        }
+    }
+}

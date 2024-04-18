@@ -8,8 +8,23 @@
 import SwiftUI
 
 struct HomeView: View {
+    @State var currentTab: String = "Home"
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        HStack {
+            SideMenuView(currentTab: $currentTab)
+            
+            MainContent()
+        }
+        .frame(
+            width: getRect().width/1.3,
+            height: getRect().height - 100,
+            alignment: .leading
+        )
+        .background(Color.white.ignoresSafeArea())
+        .buttonStyle(PlainButtonStyle())
+        .preferredColorScheme(.light)
     }
 }
 

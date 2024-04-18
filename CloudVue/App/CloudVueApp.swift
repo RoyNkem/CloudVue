@@ -9,9 +9,29 @@ import SwiftUI
 
 @main
 struct CloudVueApp: App {
+    
     var body: some Scene {
+        
+        #if os(macOS)
         WindowGroup {
-            ContentView()
+            HomeView()
         }
+        .windowStyle(HiddenTitleBarWindowStyle())
+        
+        #else
+        WindowGroup {
+            HomeView()
+        }
+        #endif
     }
 }
+
+//Hiding Focus border color
+#if os(macOS)
+extension NSTextField {
+    open override var focusRingType: NSFocusRingType {
+        get{.none}
+        set{}
+    }
+}
+#endif
