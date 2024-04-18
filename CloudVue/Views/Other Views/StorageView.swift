@@ -22,7 +22,7 @@ struct StorageView: View {
                 Image(image)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: 45, height: 45)
+                    .frame(width: 50, height: 45)
                 
                 Divider()
                     .frame(height: 45)

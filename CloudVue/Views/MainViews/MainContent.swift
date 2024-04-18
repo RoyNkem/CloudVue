@@ -50,7 +50,10 @@ struct MainContent: View {
                     ScrollView(.horizontal, showsIndicators: false) {
                         
                         HStack(spacing: 15) {
-                            AccessButtons()
+                            AccessButtons(
+                                title: "Picture", 
+                                image: "photo",
+                                color: .yellow)
                         }
                     }
                 }
@@ -65,6 +68,7 @@ struct MainContent: View {
         .frame(maxHeight: .infinity, alignment: .top)
     }
     
+    
     //Storage View Stack
     private var storageView: some View {
         HStack(spacing: 15) {
@@ -75,20 +79,20 @@ struct MainContent: View {
             )
             
             StorageView(
-                image: "drive",
-                title: "Google Drive",
+                image: "icloud",
+                title: "iCloud",
                 percentage: 0.25
             )
             
             StorageView(
-                image: "icloud",
-                title: "iCloud",
+                image: "drive",
+                title: "Google Drive",
                 percentage: 0.9
             )
             
             StorageView(
-                image: "dropbox",
-                title: "DropBox",
+                image: "onedrive",
+                title: "OneDrive",
                 percentage: 0.6
             )
         }

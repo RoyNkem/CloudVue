@@ -101,10 +101,7 @@
 			children = (
 				FA67B33A2BD18D3D008986FE /* Components */,
 				FA67B3412BD1A26E008986FE /* Other Views */,
-				FAE842782BD163CF00CC630E /* ContentView.swift */,
-				FA67B3342BD18375008986FE /* HomeView.swift */,
-				FA67B3362BD1838A008986FE /* SideMenuView.swift */,
-				FA67B33D2BD1994B008986FE /* MainContent.swift */,
+				FA67B3472BD1D2AF008986FE /* MainViews */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -163,6 +160,17 @@
 				FA67B3452BD1A734008986FE /* AccessButtons.swift */,
 			);
 			path = Buttons;
+			sourceTree = "<group>";
+		};
+		FA67B3472BD1D2AF008986FE /* MainViews */ = {
+			isa = PBXGroup;
+			children = (
+				FAE842782BD163CF00CC630E /* ContentView.swift */,
+				FA67B3342BD18375008986FE /* HomeView.swift */,
+				FA67B33D2BD1994B008986FE /* MainContent.swift */,
+				FA67B3362BD1838A008986FE /* SideMenuView.swift */,
+			);
+			path = MainViews;
 			sourceTree = "<group>";
 		};
 		FAE8426A2BD163CF00CC630E = {

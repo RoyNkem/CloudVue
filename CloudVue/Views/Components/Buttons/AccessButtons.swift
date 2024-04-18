@@ -8,22 +8,25 @@
 import SwiftUI
 
 struct AccessButtons: View {
+    var title: String
+    var image: String
+    var color: Color
     
     var body: some View {
         Button(action: {}) {
             
             VStack(spacing: 12) {
                 
-                Image(systemName: "")
+                Image(systemName: image)
                     .font(.title)
-                    .foregroundStyle(Color.yellow)
+                    .foregroundStyle(color)
                 //Square shape background
                     .frame(width: 50, height: 50)
                     .background(Color.white)
                     .clipShape(RoundedRectangle(cornerRadius: 8))
                     .shadow(color: Color.black.opacity(0.05), radius: 5, x: 5, y: 5)
                 
-                Text("Pictures")
+                Text(title)
                     .font(.caption)
                     .fontWeight(.bold)
                     .kerning(1.3)
