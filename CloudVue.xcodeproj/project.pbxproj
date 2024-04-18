@@ -72,6 +72,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA67B32E2BD1774D008986FE /* App */ = {
+			isa = PBXGroup;
+			children = (
+				FAE842762BD163CF00CC630E /* CloudVueApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		FA67B32F2BD17759008986FE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FAE842782BD163CF00CC630E /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FA67B3302BD1775E008986FE /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		FA67B3312BD17765008986FE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FA67B3322BD1776C008986FE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FAE8427A2BD163D100CC630E /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FA67B3332BD17774008986FE /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		FAE8426A2BD163CF00CC630E = {
 			isa = PBXGroup;
 			children = (
@@ -95,9 +140,12 @@
 		FAE842752BD163CF00CC630E /* CloudVue */ = {
 			isa = PBXGroup;
 			children = (
-				FAE842762BD163CF00CC630E /* CloudVueApp.swift */,
-				FAE842782BD163CF00CC630E /* ContentView.swift */,
-				FAE8427A2BD163D100CC630E /* Assets.xcassets */,
+				FA67B32E2BD1774D008986FE /* App */,
+				FA67B3332BD17774008986FE /* Shared */,
+				FA67B3322BD1776C008986FE /* Resources */,
+				FA67B3312BD17765008986FE /* Models */,
+				FA67B3302BD1775E008986FE /* ViewModels */,
+				FA67B32F2BD17759008986FE /* Views */,
 				FAE8427C2BD163D100CC630E /* CloudVue.entitlements */,
 				FAE8427D2BD163D100CC630E /* Preview Content */,
 			);
