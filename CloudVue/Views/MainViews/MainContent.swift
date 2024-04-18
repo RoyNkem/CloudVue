@@ -35,13 +35,7 @@ struct MainContent: View {
                         storageView
                     }
                     
-                    Text("Quick Access")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .foregroundStyle(Color.black)
-                        .padding(.top)
-                        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
-                    
+                    subheader(text: "Quick Access")
                     
                     //Quick Access Buttons
                     ScrollView(.horizontal, showsIndicators: false) {
@@ -50,43 +44,9 @@ struct MainContent: View {
                             .padding(.top)
                     }
                     
-                    Text("Recent Files")
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .foregroundStyle(Color.black)
-                        .padding(.top, 20)
-                        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+                    subheader(text: "Recent Files")
                     
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        
-                        HStack {
-                            VStack {
-                                
-                                HStack {
-                                    Text("Name")
-                                        .font(.caption)
-                                        .foregroundStyle(Color.gray)
-                                    
-                                    Spacer(minLength: 0)
-                                    
-                                    Text("Size")
-                                        .font(.caption)
-                                        .foregroundStyle(Color.gray)
-                                }
-                                
-                                Divider()
-                                
-                                //FIles...
-                                filesViewGroup
-                            }
-                            .padding()
-                            .frame(width: 250)
-                            .background(Color.white)
-                            .clipShape(RoundedRectangle(cornerRadius: 8))
-                            .shadow(color: .black.opacity(0.05), radius: 5, x: 5, y: 5)
-                        }
-                        .padding(.top)
-                    }
+                    recentFiles()
                 }
                 .padding()
             }
@@ -100,7 +60,56 @@ struct MainContent: View {
     }
     
     
-    //MARK: - Storage View Stack
+    //MARK: - subheader(text:)
+    
+    @ViewBuilder
+    private func subheader(text: String) -> some View {
+        Text(text)
+            .font(.title)
+            .fontWeight(.bold)
+            .foregroundStyle(Color.black)
+            .padding(.top, 20)
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+    }
+    
+    //MARK: - recentFiles()
+    
+    @ViewBuilder
+    private func recentFiles() -> some View {
+        ScrollView(.horizontal, showsIndicators: false) {
+            
+            HStack {
+                VStack {
+                    
+                    HStack {
+                        Text("Name")
+                            .font(.caption)
+                            .foregroundStyle(Color.gray)
+                        
+                        Spacer(minLength: 0)
+                        
+                        Text("Size")
+                            .font(.caption)
+                            .foregroundStyle(Color.gray)
+                    }
+                    
+                    Divider()
+                        .padding(.bottom, 8)
+                    
+                    //FIles...
+                    filesViewGroup
+                }
+                .padding()
+                .frame(width: 250)
+                .background(Color.white)
+                .clipShape(RoundedRectangle(cornerRadius: 8))
+                .shadow(color: .black.opacity(0.05), radius: 5, x: 5, y: 5)
+            }
+            .padding(.top)
+        }
+    }
+    
+    //MARK: - storageView
     
     private var storageView: some View {
         HStack(spacing: 15) {
@@ -130,7 +139,7 @@ struct MainContent: View {
         }
     }
     
-    //MARK: - Access Button Group
+    //MARK: - accessButtonGroup
     
     private var accessButtonGroup: some View {
         HStack(spacing: 15) {
@@ -172,7 +181,7 @@ struct MainContent: View {
         }
     }
     
-    //MARK: - Files View Group
+    //MARK: - filesViewGroup
     
     private var filesViewGroup: some View {
         VStack(spacing: 12) {
