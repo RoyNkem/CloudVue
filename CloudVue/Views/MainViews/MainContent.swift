@@ -35,26 +35,57 @@ struct MainContent: View {
                         storageView
                     }
                     
-                    HStack {
-                        Text("Quick Access")
-                            .font(.title)
-                            .fontWeight(.bold)
-                            .foregroundStyle(Color.black)
-                            .padding(.top)
-                            .frame(maxWidth: .infinity, maxHeight: .infinity)
-                        
-                        Spacer()
-                    }
+                    Text("Quick Access")
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .foregroundStyle(Color.black)
+                        .padding(.top)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+                    
                     
                     //Quick Access Buttons
                     ScrollView(.horizontal, showsIndicators: false) {
                         
-                        HStack(spacing: 15) {
-                            AccessButtons(
-                                title: "Picture", 
-                                image: "photo",
-                                color: .yellow)
+                        accessButtonGroup
+                            .padding(.top)
+                    }
+                    
+                    Text("Recent Files")
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .foregroundStyle(Color.black)
+                        .padding(.top, 20)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+                    
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        
+                        HStack {
+                            VStack {
+                                
+                                HStack {
+                                    Text("Name")
+                                        .font(.caption)
+                                        .foregroundStyle(Color.gray)
+                                    
+                                    Spacer(minLength: 0)
+                                    
+                                    Text("Size")
+                                        .font(.caption)
+                                        .foregroundStyle(Color.gray)
+                                }
+                                
+                                Divider()
+                                
+                                //FIles...
+                                filesViewGroup
+                            }
+                            .padding()
+                            .frame(width: 250)
+                            .background(Color.white)
+                            .clipShape(RoundedRectangle(cornerRadius: 8))
+                            .shadow(color: .black.opacity(0.05), radius: 5, x: 5, y: 5)
                         }
+                        .padding(.top)
                     }
                 }
                 .padding()
@@ -69,7 +100,8 @@ struct MainContent: View {
     }
     
     
-    //Storage View Stack
+    //MARK: - Storage View Stack
+    
     private var storageView: some View {
         HStack(spacing: 15) {
             StorageView(
@@ -97,7 +129,94 @@ struct MainContent: View {
             )
         }
     }
+    
+    //MARK: - Access Button Group
+    
+    private var accessButtonGroup: some View {
+        HStack(spacing: 15) {
+            AccessButtons(
+                title: "Pictures",
+                image: "photo",
+                color: .yellow
+            )
+            
+            AccessButtons(
+                title: "Music",
+                image: "music.note.house.fill",
+                color: .blue
+            )
+            
+            AccessButtons(
+                title: "Videos",
+                image: "play.rectangle.fill",
+                color: .red
+            )
+            
+            AccessButtons(
+                title: "Apps",
+                image: "square.grid.2x2.fill",
+                color: .yellow
+            )
+            
+            AccessButtons(
+                title: "Documents",
+                image: "doc.fill",
+                color: .blue
+            )
+            
+            AccessButtons(
+                title: "Downloads",
+                image: "arrow.down.app.fill",
+                color: .pink
+            )
+        }
+    }
+    
+    //MARK: - Files View Group
+    
+    private var filesViewGroup: some View {
+        VStack(spacing: 12) {
+            FilesView(
+                name: "wedding.jpg",
+                size: "11 MB",
+                image: "photo",
+                date: "16 April 2003"
+            )
+            
+            FilesView(
+                name: "Apple.mp4",
+                size: "8 MB",
+                image: "play.rectangle.fill",
+                date: "06 March 2007",
+                color: .red
+            )
+            
+            FilesView(
+                name: "WWDC.jpg",
+                size: "6 MB",
+                image: "photo",
+                date: "11 June 2023"
+            )
+            
+            FilesView(
+                name: "SwiftUI 3.0.mp4",
+                size: "32 MB",
+                image: "play.rectangle.fill",
+                date: "16 April 2003",
+                color: .red
+            )
+            
+            FilesView(
+                name: "Learning_SwiftUI.pdf",
+                size: "15 MB",
+                image: "doc.fill",
+                date: "16 August 2018",
+                color: .blue
+            )
+        }
+    }
 }
+
 
 #Preview {
     MainContent()

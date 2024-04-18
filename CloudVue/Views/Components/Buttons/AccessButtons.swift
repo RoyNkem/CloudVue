@@ -32,6 +32,7 @@ struct AccessButtons: View {
                     .kerning(1.3)
                     .foregroundStyle(Color.black)
             }
+            .frame(width: 80)
         }
     }
 }
