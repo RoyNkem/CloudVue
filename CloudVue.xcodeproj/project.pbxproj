@@ -17,6 +17,9 @@
 		FA67B3462BD1A734008986FE /* AccessButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA67B3452BD1A734008986FE /* AccessButtons.swift */; };
 		FA67B3492BD1E415008986FE /* FilesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA67B3482BD1E415008986FE /* FilesView.swift */; };
 		FA67B34B2BD1EBCC008986FE /* SideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA67B34A2BD1EBCC008986FE /* SideView.swift */; };
+		FA67B34D2BD1F314008986FE /* StorageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA67B34C2BD1F314008986FE /* StorageType.swift */; };
+		FA67B34F2BD1F3E7008986FE /* StorageCapacityCalculatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA67B34E2BD1F3E7008986FE /* StorageCapacityCalculatable.swift */; };
+		FA67B3512BD1FF8B008986FE /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA67B3502BD1FF8B008986FE /* StorageManager.swift */; };
 		FAE842772BD163CF00CC630E /* CloudVueApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE842762BD163CF00CC630E /* CloudVueApp.swift */; };
 		FAE842792BD163CF00CC630E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE842782BD163CF00CC630E /* ContentView.swift */; };
 		FAE8427B2BD163D100CC630E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAE8427A2BD163D100CC630E /* Assets.xcassets */; };
@@ -54,6 +57,9 @@
 		FA67B3452BD1A734008986FE /* AccessButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessButtons.swift; sourceTree = "<group>"; };
 		FA67B3482BD1E415008986FE /* FilesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesView.swift; sourceTree = "<group>"; };
 		FA67B34A2BD1EBCC008986FE /* SideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideView.swift; sourceTree = "<group>"; };
+		FA67B34C2BD1F314008986FE /* StorageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageType.swift; sourceTree = "<group>"; };
+		FA67B34E2BD1F3E7008986FE /* StorageCapacityCalculatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageCapacityCalculatable.swift; sourceTree = "<group>"; };
+		FA67B3502BD1FF8B008986FE /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		FAE842732BD163CF00CC630E /* CloudVue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudVue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAE842762BD163CF00CC630E /* CloudVueApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudVueApp.swift; sourceTree = "<group>"; };
 		FAE842782BD163CF00CC630E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -120,6 +126,9 @@
 		FA67B3312BD17765008986FE /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FA67B34C2BD1F314008986FE /* StorageType.swift */,
+				FA67B34E2BD1F3E7008986FE /* StorageCapacityCalculatable.swift */,
+				FA67B3502BD1FF8B008986FE /* StorageManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -373,12 +382,15 @@
 				FA67B3392BD18434008986FE /* Extensions.swift in Sources */,
 				FA67B3352BD18375008986FE /* HomeView.swift in Sources */,
 				FAE842792BD163CF00CC630E /* ContentView.swift in Sources */,
+				FA67B34F2BD1F3E7008986FE /* StorageCapacityCalculatable.swift in Sources */,
+				FA67B34D2BD1F314008986FE /* StorageType.swift in Sources */,
 				FA67B33C2BD18D5F008986FE /* TabButton.swift in Sources */,
 				FA67B3402BD19B57008986FE /* SearchBar.swift in Sources */,
 				FA67B3432BD1A292008986FE /* StorageView.swift in Sources */,
 				FA67B3462BD1A734008986FE /* AccessButtons.swift in Sources */,
 				FA67B3372BD1838A008986FE /* SideMenuView.swift in Sources */,
 				FA67B34B2BD1EBCC008986FE /* SideView.swift in Sources */,
+				FA67B3512BD1FF8B008986FE /* StorageManager.swift in Sources */,
 				FA67B3492BD1E415008986FE /* FilesView.swift in Sources */,
 				FAE842772BD163CF00CC630E /* CloudVueApp.swift in Sources */,
 			);

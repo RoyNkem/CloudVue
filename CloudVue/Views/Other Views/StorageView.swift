@@ -12,7 +12,8 @@ struct StorageView: View {
     
     var image: String
     var title: String
-    var percentage: CGFloat
+    
+    var storageType: StorageType
     
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
@@ -33,14 +34,14 @@ struct StorageView: View {
                         .stroke(Color.accentColor.opacity(0.4), lineWidth: 8)
                     
                     Circle()
-                        .trim(from: 0.0, to: percentage)
+                        .trim(from: 0.0, to: storageType.computeTrim() ?? 0)
                         .stroke(
                             Color.accentColor,
                             style: StrokeStyle(lineWidth: 8, lineCap: .round, lineJoin: .round)
                         )
                         .rotationEffect(.init(degrees: -90))
                     
-                    Text("\(Int(percentage * 100))%")
+                    Text("\(Int(storageType.computeTrimAsPercentage() ?? 0))%")
                         .font(.caption)
                         .fontWeight(.bold)
                         .foregroundStyle(Color.black)
@@ -56,7 +57,7 @@ struct StorageView: View {
                 .foregroundStyle(Color.black)
                 .padding(.top)
             
-            Text("143 GB/ 150 GB")
+            Text("\(storageType.usedSpace) GB / \(storageType.maxCapacity) GB")
                 .font(.caption)
                 .foregroundStyle(Color.gray)
                 .padding(.top, 4)

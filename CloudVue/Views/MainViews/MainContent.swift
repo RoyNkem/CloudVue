@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MainContent: View {
     @State var search: String = ""
+    let storageManager = StorageManager.shared
     
     var body: some View {
         
@@ -116,28 +117,29 @@ struct MainContent: View {
             StorageView(
                 image: "dropbox",
                 title: "DropBox",
-                percentage: 0.6
+                storageType: storageManager.dropboxStorage
             )
             
             StorageView(
                 image: "icloud",
                 title: "iCloud",
-                percentage: 0.25
+                storageType: storageManager.icloudStorage
             )
             
             StorageView(
                 image: "drive",
                 title: "Google Drive",
-                percentage: 0.9
+                storageType: storageManager.googleDriveStorage
             )
             
             StorageView(
                 image: "onedrive",
                 title: "OneDrive",
-                percentage: 0.6
+                storageType: storageManager.oneDrive
             )
         }
     }
+    
     
     //MARK: - accessButtonGroup
     
@@ -224,10 +226,5 @@ struct MainContent: View {
             )
         }
     }
-}
-
-
-#Preview {
-    MainContent()
 }
 

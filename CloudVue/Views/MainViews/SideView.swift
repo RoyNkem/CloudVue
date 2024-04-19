@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct SideView: View {
+    let storageMangager = StorageManager.shared
+    
     var body: some View {
         
         VStack {
@@ -19,13 +21,14 @@ struct SideView: View {
             
             //Storage space
             VStack {
+                let overallUsage = storageMangager.calculateOverallUsage()
                 
                 ZStack {
                     Circle()
                         .stroke(Color.gray.opacity(0.3), lineWidth: 25)
                     
                     Circle()
-                        .trim(from: 0, to: 0.7)
+                        .trim(from: 0, to: overallUsage.percentage)
                         .stroke(
                             Color.accentColor,
                             style: StrokeStyle(
@@ -37,7 +40,7 @@ struct SideView: View {
                         .rotationEffect(.init(degrees: -90))
                     
                     VStack {
-                        Text("70%")
+                        Text("\(Int(overallUsage.percentage * 100))%")
                             .font(.title2)
                             .fontWeight(.bold)
                             .foregroundStyle(Color.black)
@@ -51,27 +54,9 @@ struct SideView: View {
                 
                 HStack(spacing: 15) {
                     
-                    VStack(alignment: .leading, spacing: 6) {
-                        Text("Total Space")
-                            .font(.caption)
-                            .fontWeight(.semibold)
-                            .foregroundStyle(Color.gray)
-                        
-                        Text("256 GB")
-                            .font(.caption)
-                            .fontWeight(.bold)
-                    }
+                    showStorageUsage(for: "Total Space", with: overallUsage.totalMaxCapacity)
                     
-                    VStack(alignment: .leading, spacing: 6) {
-                        Text("Used Space")
-                            .font(.caption)
-                            .fontWeight(.semibold)
-                            .foregroundStyle(Color.gray)
-                        
-                        Text("130 GB")
-                            .font(.caption)
-                            .fontWeight(.bold)
-                    }
+                    showStorageUsage(for: "Used Space", with: overallUsage.usedSpace)
                 }
             }
             .padding(.vertical, 12)
@@ -85,5 +70,19 @@ struct SideView: View {
         .frame(width: 220)
         .frame(maxHeight: .infinity, alignment: .top)
         .background(Color("AppGray").opacity(0.3).ignoresSafeArea())
+    }
+    
+    @ViewBuilder
+    private func showStorageUsage(for space: String, with capacity: Int) -> some View {
+        VStack(alignment: .leading, spacing: 6) {
+            Text(space)
+                .font(.caption)
+                .fontWeight(.semibold)
+                .foregroundStyle(Color.gray)
+            
+            Text("\(capacity) GB")
+                .font(.caption)
+                .fontWeight(.bold)
+        }
     }
 }
