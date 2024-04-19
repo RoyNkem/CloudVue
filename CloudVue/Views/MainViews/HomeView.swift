@@ -16,6 +16,8 @@ struct HomeView: View {
             SideMenuView(currentTab: $currentTab)
             
             MainContent()
+            
+            SideView()
         }
         .frame(
             width: getRect().width/1.3,

@@ -59,6 +59,7 @@ struct StorageView: View {
             Text("143 GB/ 150 GB")
                 .font(.caption)
                 .foregroundStyle(Color.gray)
+                .padding(.top, 4)
             
         }
         .padding()

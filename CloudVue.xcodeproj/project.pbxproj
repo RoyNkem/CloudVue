@@ -16,6 +16,7 @@
 		FA67B3432BD1A292008986FE /* StorageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA67B3422BD1A292008986FE /* StorageView.swift */; };
 		FA67B3462BD1A734008986FE /* AccessButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA67B3452BD1A734008986FE /* AccessButtons.swift */; };
 		FA67B3492BD1E415008986FE /* FilesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA67B3482BD1E415008986FE /* FilesView.swift */; };
+		FA67B34B2BD1EBCC008986FE /* SideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA67B34A2BD1EBCC008986FE /* SideView.swift */; };
 		FAE842772BD163CF00CC630E /* CloudVueApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE842762BD163CF00CC630E /* CloudVueApp.swift */; };
 		FAE842792BD163CF00CC630E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE842782BD163CF00CC630E /* ContentView.swift */; };
 		FAE8427B2BD163D100CC630E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAE8427A2BD163D100CC630E /* Assets.xcassets */; };
@@ -52,6 +53,7 @@
 		FA67B3422BD1A292008986FE /* StorageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageView.swift; sourceTree = "<group>"; };
 		FA67B3452BD1A734008986FE /* AccessButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessButtons.swift; sourceTree = "<group>"; };
 		FA67B3482BD1E415008986FE /* FilesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesView.swift; sourceTree = "<group>"; };
+		FA67B34A2BD1EBCC008986FE /* SideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideView.swift; sourceTree = "<group>"; };
 		FAE842732BD163CF00CC630E /* CloudVue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudVue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAE842762BD163CF00CC630E /* CloudVueApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudVueApp.swift; sourceTree = "<group>"; };
 		FAE842782BD163CF00CC630E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -102,8 +104,8 @@
 			isa = PBXGroup;
 			children = (
 				FA67B33A2BD18D3D008986FE /* Components */,
-				FA67B3412BD1A26E008986FE /* Other Views */,
 				FA67B3472BD1D2AF008986FE /* MainViews */,
+				FA67B3412BD1A26E008986FE /* Other Views */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -172,6 +174,7 @@
 				FA67B3342BD18375008986FE /* HomeView.swift */,
 				FA67B33D2BD1994B008986FE /* MainContent.swift */,
 				FA67B3362BD1838A008986FE /* SideMenuView.swift */,
+				FA67B34A2BD1EBCC008986FE /* SideView.swift */,
 			);
 			path = MainViews;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 				FA67B3432BD1A292008986FE /* StorageView.swift in Sources */,
 				FA67B3462BD1A734008986FE /* AccessButtons.swift in Sources */,
 				FA67B3372BD1838A008986FE /* SideMenuView.swift in Sources */,
+				FA67B34B2BD1EBCC008986FE /* SideView.swift in Sources */,
 				FA67B3492BD1E415008986FE /* FilesView.swift in Sources */,
 				FAE842772BD163CF00CC630E /* CloudVueApp.swift in Sources */,
 			);
