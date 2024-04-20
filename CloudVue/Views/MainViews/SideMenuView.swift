@@ -24,7 +24,7 @@ struct SideMenuView: View {
                 .padding(.bottom)
             
             UserProfileView (
-                name: "John",
+                name: "Roy",
                 imageName: "pic",
                 imageSize: imageSize
             )

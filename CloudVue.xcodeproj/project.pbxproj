@@ -20,6 +20,7 @@
 		FA67B34D2BD1F314008986FE /* StorageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA67B34C2BD1F314008986FE /* StorageType.swift */; };
 		FA67B34F2BD1F3E7008986FE /* StorageCapacityCalculatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA67B34E2BD1F3E7008986FE /* StorageCapacityCalculatable.swift */; };
 		FA67B3512BD1FF8B008986FE /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA67B3502BD1FF8B008986FE /* StorageManager.swift */; };
+		FA67B3532BD20A01008986FE /* AdaptableStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA67B3522BD20A01008986FE /* AdaptableStack.swift */; };
 		FAE842772BD163CF00CC630E /* CloudVueApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE842762BD163CF00CC630E /* CloudVueApp.swift */; };
 		FAE842792BD163CF00CC630E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE842782BD163CF00CC630E /* ContentView.swift */; };
 		FAE8427B2BD163D100CC630E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAE8427A2BD163D100CC630E /* Assets.xcassets */; };
@@ -60,6 +61,7 @@
 		FA67B34C2BD1F314008986FE /* StorageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageType.swift; sourceTree = "<group>"; };
 		FA67B34E2BD1F3E7008986FE /* StorageCapacityCalculatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageCapacityCalculatable.swift; sourceTree = "<group>"; };
 		FA67B3502BD1FF8B008986FE /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		FA67B3522BD20A01008986FE /* AdaptableStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptableStack.swift; sourceTree = "<group>"; };
 		FAE842732BD163CF00CC630E /* CloudVue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudVue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAE842762BD163CF00CC630E /* CloudVueApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudVueApp.swift; sourceTree = "<group>"; };
 		FAE842782BD163CF00CC630E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				FA67B3382BD18434008986FE /* Extensions.swift */,
+				FA67B3522BD20A01008986FE /* AdaptableStack.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -381,6 +384,7 @@
 				FA67B33E2BD1994B008986FE /* MainContent.swift in Sources */,
 				FA67B3392BD18434008986FE /* Extensions.swift in Sources */,
 				FA67B3352BD18375008986FE /* HomeView.swift in Sources */,
+				FA67B3532BD20A01008986FE /* AdaptableStack.swift in Sources */,
 				FAE842792BD163CF00CC630E /* ContentView.swift in Sources */,
 				FA67B34F2BD1F3E7008986FE /* StorageCapacityCalculatable.swift in Sources */,
 				FA67B34D2BD1F314008986FE /* StorageType.swift in Sources */,
