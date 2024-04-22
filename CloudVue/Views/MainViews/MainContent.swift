@@ -32,6 +32,7 @@ struct MainContent: View {
                 
                 VStack {
                     
+                    //Storage Capacities
                     ScrollView(.horizontal, showsIndicators: false) {
                         storageView
                     }
