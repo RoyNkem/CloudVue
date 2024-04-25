@@ -5,7 +5,7 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
-  workflow_dispatch: #Allow manually triggering workflow
+  workflow_dispatch: 
 
 jobs:
   build:
@@ -16,11 +16,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       
-      - name: Set Up Xcode
-        uses: actions/setup-xcode@v2
-        with:
-          xcode-version: '13.0'  # Adjust to your preferred Xcode version
-
+      - name: Install Xcode command line tools
+        run: sudo xcode-select --install || true  # Install command line tools if not already installed
+      
       - name: Build and Test
         run: |
           xcodebuild clean build test \
